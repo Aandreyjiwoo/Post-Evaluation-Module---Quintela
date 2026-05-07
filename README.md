@@ -1,32 +1,37 @@
-# E-DEFENSE SYSTEM FOR RESEARCH DEFENSES IN THE UNIVERSITY OF NUEVA CACERES
+# Post-Evaluation Module
+Part of the E-Defense System
 
-E-Defense is an integrated research defense management system developed for the University of Nueva Caceres. It addresses the institutional need to eliminate manual paperwork, reduce scheduling conflicts, and bridge communication gaps among students, research advisers, panel members, and administrators.
-The platform digitalizes the entire research defense lifecycle, from scheduling and panel assignments to post-evaluation consolidation. Enabling efficient management of thesis and capstone defense records across all academic units .
+Overview
+The Post-Evaluation Module is a centralized information management system designed to handle the critical transition between the defense proceedings and final institutional clearance. It automates the collection, consolidation, and processing of evaluation data from panelists and secretaries into a single, standardized official report.
+
+By eliminating manual data entry errors and ensuring consistency through departmental rubrics, the module provides a secure environment where the Research Coordinator manages data integrity via "data-locking," and the Panel Chair issues final verdicts and book-binding clearances.
 
 ## Tech Stack
-- **Language:** PHP / JavaScript / Python
+- **Language:** PHP / JavaScript
 - **Framework:** Laravel (Backend API) / React (Frontend)
 - **Database:** MySQL
+- **Architecture:** Layered Service Architecture (Report Generation Service, Consolidation Engine, Access Control)
 
 ## Installation Guide
 
-1. Clone the repository:
-```bash
-   git clone https://github.com/DkFerrer/E-Defense-System.git
-   cd e-defense
-```
-2. Install dependencies:
-```bash
-   composer install       
-   npm install            
-   pip install -r requirements.txt   
-```
-3. Set up environment variables — copy .env.example to .env and fill in values.
-4. Run the application:
-```bash
-   php artisan serve      
-   npm run dev            
-```
+# Clone the repository
+git clone https://github.com/Aandreyjiwoo/Post-Evaluation-Module---Quintela.git
+cd Post-Evaluation-Module---Quintela
+
+# Install dependencies
+composer install       
+npm install            
+
+# Set up environment
+cp .env.example .env
+# Update .env with your local MySQL credentials
+
+# Initialize Database
+php artisan migrate --seed
+
+# Run the application
+php artisan serve      
+npm run dev
 
 ## Contributors
 | Name | Role |
